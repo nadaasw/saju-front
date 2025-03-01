@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://127.0.0.1:8000"; // FastAPI 서버 주소
+const API_BASE_URL = "https://saju-back.onrender.com"; // FastAPI 서버 주소
 
 export const getSaju = async (birthDate, birthTime, name, birthPlace) => {
     try {
