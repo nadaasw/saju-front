@@ -1,38 +1,111 @@
-.App {
+/*
+  사주풀이 웹사이트 (Frontend - React)
+  동양적인 디자인 적용 (하얀색 배경, 붓글씨 스타일 폰트)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+
+body {
+  font-family: 'Nanum Brush Script', cursive;
+  background-color: white;
+  color: black;
   text-align: center;
+  background-image: url('../public/background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1.title {
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.saju-form {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* ✅ 입력 폼을 세로로 정렬 */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px; /* ✅ 입력 필드 간격 추가 */
+  max-width: 400px;
+  margin: auto;
+}
+
+input, button {
+  font-family: 'Nanum Brush Script', cursive;
+  border: 2px solid black;
+  padding: 15px;
+  margin: 10px 0; /* ✅ 세로 정렬 시 위아래 여백 추가 */
+  background-color: transparent;
+  font-size: 20px;
+  width: 100%; /* ✅ 입력 필드를 가득 채우도록 설정 */
+  max-width: 300px;
+}
+
+button {
+  background-color: black;
   color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 22px;
+  width: 100%;
+  max-width: 320px;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #333;
+}
+.result-text {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.8; /* ✅ 줄 간격 조정 */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.result-text h1, .result-text h2, .result-text h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.result-text ul {
+  padding-left: 20px;
+}
+
+.result-text li {
+  margin-bottom: 8px;
+}
+
+.result-text strong {
+  color: #d35400; /* ✅ 중요한 글자 색 강조 */
+}
+
+.result-text em {
+  font-style: italic;
+  color: #2c3e50;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.home-button {
+  font-size: 18px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.home-button:hover {
+  background-color: #1e7e34;
 }
